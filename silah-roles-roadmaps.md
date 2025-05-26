@@ -75,7 +75,37 @@ You can find suggested learning resources (YouTube Videos and Playlists) on our 
 ### 2. Learn Git and GitHub
 
 - 🔶 Git: Local version control
+
+  - What Git is and why we use it
+  - Basic commands (init, status, add, commit, log, diff)
+  - How to use Git in the terminal of your IDE or text editor of choice
+  - How to view commit history and navigate between commits
+
 - 🔶 GitHub: Sharing and collaborating
+
+  - What GitHub is and how it's different from Git
+  - How to create and upload (push) a repository
+  - How to clone an existing repo to your local machine
+  - The concept of remote repositories (origin/main)
+  - GitHub's special repository (username.github.io (used for portfolios))
+  - `README.md`; writing good documentation
+  - Markdown basics (for docs, issues, and comments)
+  - `.gitignore`; what it does and when to use it
+  - Understand these common terms:
+    - Clone
+    - Push
+    - Pull
+    - Pull Request (PR)
+    - Merge
+  - How to do code reviews on PRs
+  - GitHub Issues; tracking tasks, bugs, and feature requests
+  - GitHub Projects; organizing work using boards (Kanban-style)
+  - GitHub extensions for your IDE/TextEditor (VS Code, IntelliJ, etc.)
+  - Understand GitHub Flow; the basic workflow (branch, commit, PR, merge)
+  - What is rebase and how it compares to merge
+  - What is Git stash and how to use it (save uncommitted changes temporarily)
+  - What is Git squash and when to use it (combine multiple commits into one)
+  - How to resolve merge conflicts
 
 ### 3. Learn React
 
@@ -85,7 +115,7 @@ What You’ll Learn in This Step:
 
 - 🔶 React Basics
 
-  - What is React and why use it?
+  - What is React and why to use it
   - How React works (JSX, Virtual DOM, Components)
 
 - 🔶 Core Concepts
@@ -252,7 +282,37 @@ You can find suggested learning resources (YouTube Videos and Playlists) on our 
 ### 2. Learn Git and GitHub
 
 - 🔶 Git: Local version control
+
+  - What Git is and why we use it
+  - Basic commands (init, status, add, commit, log, diff)
+  - How to use Git in the terminal of your IDE or text editor of choice
+  - How to view commit history and navigate between commits
+
 - 🔶 GitHub: Sharing and collaborating
+
+  - What GitHub is and how it's different from Git
+  - How to create and upload (push) a repository
+  - How to clone an existing repo to your local machine
+  - The concept of remote repositories (origin/main)
+  - GitHub's special repository (username.github.io (used for portfolios))
+  - `README.md`; writing good documentation
+  - Markdown basics (for docs, issues, and comments)
+  - `.gitignore`; what it does and when to use it
+  - Understand these common terms:
+    - Clone
+    - Push
+    - Pull
+    - Pull Request (PR)
+    - Merge
+  - How to do code reviews on PRs
+  - GitHub Issues; tracking tasks, bugs, and feature requests
+  - GitHub Projects; organizing work using boards (Kanban-style)
+  - GitHub extensions for your IDE/TextEditor (VS Code, IntelliJ, etc.)
+  - Understand GitHub Flow; the basic workflow (branch, commit, PR, merge)
+  - What is rebase and how it compares to merge
+  - What is Git stash and how to use it (save uncommitted changes temporarily)
+  - What is Git squash and when to use it (combine multiple commits into one)
+  - How to resolve merge conflicts
 
 ### 3. Learn NestJS
 
