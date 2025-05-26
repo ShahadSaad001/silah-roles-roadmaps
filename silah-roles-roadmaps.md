@@ -62,9 +62,9 @@ There will be tasks marked with different **priority levels** — high priority 
 
 Don’t worry if you don’t understand the tasks yet! The topics will become clear as you follow tutorials and start writing code.
 
-You can find suggested learning resources (YouTube Videos and Playlists) on our WhatsUp group "مجموعة مشاركة البحوث ونتائجها", and please share the resources you find with us as well!
+You can find suggested learning resources (YouTube Videos and Playlists) on our WhatsApp group "مجموعة مشاركة البحوث ونتائجها", and please share the resources you find with us as well!
 
-## Roadmap
+## Frontend Dev Roadmap
 
 ### 1. Learn the Basics of the Web
 
@@ -242,6 +242,19 @@ This step covers **Silah-specific needs** and more advanced frontend skills that
   - Code splitting with React Router (split pages)
   - Best practices to avoid slow initial loads
 
+- 🔹 Using [Chart.js](https://www.chartjs.org) with React
+
+Chart.js is a powerful and lightweight JavaScript library for creating interactive and beautiful charts and graphs on the web. It supports many types of charts like line, bar, doughnut, pie, and radar charts. In our project, we’ll use it to **visualize supplier profits** and **display AI-based demand forecasts** in a user-friendly way.
+
+- Installing and importing `chart.js` and `react-chartjs-2`
+- Understanding the basic chart structure (`data` and `options`)
+- Drawing common chart types:
+  - Line Chart (for stock demand prediction over time using AI results)
+  - Bar Chart (for monthly profits made by a supplier)
+- Customizing charts:
+  - Styling the appearance (colors, fonts, sizes, gridlines)
+  - Adding tooltips and legends
+
 ---
 
 ## Backend Development Roadmap
@@ -268,9 +281,9 @@ There will be tasks marked with different **priority levels** — high priority 
 
 Don’t worry if you don’t understand the tasks yet! The topics will become clear as you follow tutorials and start writing code.
 
-You can find suggested learning resources (YouTube Videos and Playlists) on our WhatsUp group "مجموعة مشاركة البحوث ونتائجها", and please share the resources you find with us as well!
+You can find suggested learning resources (YouTube Videos and Playlists) on our WhatsApp group "مجموعة مشاركة البحوث ونتائجها", and please share the resources you find with us as well!
 
-## Roadmap
+## Backend Dev Roadmap
 
 ### 1. Learn the Basics of the Web
 
@@ -412,3 +425,131 @@ NestJS is a framework for building efficient and scalable server-side applicatio
   - Using filters, interceptors, and custom exceptions
 
 ---
+
+## AI Development Roadmap
+
+This section is for anyone who wants to contribute to the **AI-related tasks** in our graduation project, _Silah_. The goal here is to prepare, fine-tune, deploy, and finally integrate our AI models into the working system, so users can benefit from smart features like **semantic search** and **demand forecasting**.
+
+This is not a theoretical AI study. We’re focusing on **practical tasks** to bring real AI functionality into our project.
+
+### Goal of the AI Roadmap
+
+By the end of this roadmap, you'll be able to:
+
+- Understand what each AI model does and how it works
+- Fine-tune pre-trained models (LaBSE and Facebook Prophet) using the found datasets
+- Deploy these models to a cloud platform (DigitalOcean) so they’re accessible online
+- Integrate them into the backend (FastAPI) and connect to the frontend (React)
+- Handle requests like:
+  - “What’s the expected demand for this product in the coming three months?”
+  - “What are some alternative products similar to this one?”
+
+### Our AI Tasks
+
+We have **two main AI features**:
+
+1. **Semantic Search for Alternatives**
+
+   - **Model**: LaBSE (Language-Agnostic BERT Sentence Embedding)
+   - **Task**: When a user types something like “towel”, we find products in our database with similar meaning, not just similar text.
+   - **Method**: Convert both the search query and product descriptions into embeddings, then use cosine similarity to find the closest matches.
+
+2. **Product Demand Forecasting**
+   - **Model**: Facebook Prophet
+   - **Task**: Predict how much of a certain product will be needed in the coming three months.
+   - **Method**: Fine-tune Prophet on historical stock data provided by suppliers.
+
+### AI Workflow Summary
+
+There are **3 main phases** in the AI work for our project:
+
+1. **Fine-Tuning**  
+   We already have pre-trained models, but we will fine-tune them using public datasets to improve accuracy and relevance to our domain.
+
+2. **Deployment**  
+   We’ll deploy the models as separate services on DigitalOcean. This way, the backend can send API requests to them just like any external service.
+
+3. **Integration**  
+   This is where we connect everything. FastAPI will act as a bridge, sending user inputs to the models and receiving predictions or results. Then, we display those results to the user via our website frontend.
+
+### How to Use This Roadmap
+
+This roadmap is a **temporary guide** just for the AI features we are developing. You don’t need to be an expert in AI to contribute; just follow the steps, and learn by doing.
+
+We’ll also share YouTube tutorials and helpful notes in our WhatsApp group _"مجموعة مشاركة البحوث ونتائجها"_, don’t forget to contribute what you find as well!
+
+## AI Tasks Roadmap
+
+### 1. Introduction to AI and Machine Learning
+
+You don’t need to become an AI researcher, but you should understand machine learning at a practical, high level.
+
+- What is AI vs ML vs Deep Learning
+- Types of ML: Supervised vs Unsupervised vs Reinforcement Learning
+- What is a model: inputs, outputs, training, and inference
+- Training vs Fine-tuning vs Transfer learning
+- Pre-trained models and how to use them
+- What is an embedding?
+- What is inference time? Why we separate training from serving
+
+### 2. Python for AI
+
+We use Python to train, serve, and deploy models using FastAPI.
+
+- Python syntax (variables, loops, functions, classes)
+- NumPy and Pandas for data manipulation
+- Matplotlib and Seaborn for data visualization
+- Installing libraries with `pip`
+- Using Jupyter Notebooks
+- File I/O and JSON handling
+
+### 3. Semantic Search using LaBSE
+
+LaBSE (Language-agnostic BERT Sentence Embedding) maps sentences into a shared vector space. We use it to implement semantic search for product alternatives.
+
+- Sentence embeddings and how they work
+- Cosine similarity
+- Using HuggingFace Transformers or `sentence-transformers`
+- How to compute and save embeddings
+- Comparing user input with precomputed data
+
+### 4. Demand Forecasting using Facebook Prophet
+
+Prophet forecasts future product demand from historical data. We use it to help the business understand what to stock.
+
+- Time series data: trend, seasonality, holidays
+- Prophet's input format: `ds`, `y`
+- Training, plotting, and evaluating a forecast
+
+### 5. Serving Models with FastAPI
+
+We will expose both LaBSE and Prophet as REST APIs using FastAPI.
+
+- What is FastAPI and why it’s used
+- Creating routes and endpoints
+- Accepting JSON input and returning JSON output
+- Loading models once at startup
+- Error handling and validation
+
+### 6. Deploying the AI Models
+
+We will make the AI models publicly accessible by deploying them to a cloud VM (DigitalOcean).
+
+- What is a VM/Droplet
+- Installing Python and dependencies
+- Running FastAPI with `uvicorn`, `gunicorn`
+- Running services in the background with `pm2` or `systemd`
+- Basic server security (SSH keys, disable root)
+
+### 7. Frontend Integration
+
+Once deployed, the AI services will be used by the frontend.
+
+- Semantic Search API:
+  - Frontend sends a query to FastAPI endpoint → gets most similar product → shows results in UI
+- Prophet Forecast API:
+  - Frontend sends product ID to FastAPI endpoint → gets 90 days forecast → plots it using Chart.js
+
+---
+
+May Allah put barakah in our efforts and make it beneficial for the Ummah.
