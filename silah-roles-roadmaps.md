@@ -93,6 +93,7 @@ You can find suggested learning resources (YouTube Videos and Playlists) on our 
   - `.gitignore`; what it does and when to use it
   - Understand these common terms:
     - Clone
+    - Fork
     - Push
     - Pull
     - Pull Request (PR)
@@ -313,6 +314,7 @@ You can find suggested learning resources (YouTube Videos and Playlists) on our 
   - `.gitignore`; what it does and when to use it
   - Understand these common terms:
     - Clone
+    - Fork
     - Push
     - Pull
     - Pull Request (PR)
